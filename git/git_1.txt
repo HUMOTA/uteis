@@ -30,13 +30,21 @@ Esc            (Sai do modo de comando)
 y              (Copia)
 p              (Cola)
 ------------------------------------------------------------------------------------
-
-
-# COMANDOS INICIAIS
-
---Configurando chave de acesso:
+# Configurando chave de acesso:
 ssh-keygen -C "hugo.iguanaa@gmail.com" -t rsa
 ssh-keygen -t rsa -b 4096 -C "hugo.iguanaa@gmail.com"
+------------------------------------------------------------------------------------
+# Salvando credenciais para não precisar ficar sempre colocando usuário e senha:
+
+$ git config --global credential.helper 'cache --timeout=28800'
+$ git config --global credential.helper cache
+$ git config credential.helper cache
+
+OBS: Sem a opção "--global", o comando é aplicado apenas para o repositório em questão.
+------------------------------------------------------------------------------------
+# COMANDOS INICIAIS
+
+
 
 -- Criando projeto git e dando push pro gitHub:
 git init
