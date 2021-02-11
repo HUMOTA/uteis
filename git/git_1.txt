@@ -164,4 +164,10 @@ git mv arquivo.java arquivo_1.java         (Renomeando arquivos)
 git mv arquivo.java imagens/arquivo_1.java (Movendo arquivos)
 git rm arquivo.java                        (Remove o arquivo após commit e adiciona a remoção ao stage)
 
+
+# Salvar usuário e senha do git para que não seja mais solicitado
+$ git config --global credential.helper 'cache --timeout=28800'
+$ git config --global credential.helper cache
+$ git config credential.helper cache
+
 ------------------------------------------------------------------------------------
